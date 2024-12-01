@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfApp6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp6"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="600" ResizeMode="NoResize">
+
+    <Grid Background="#FF191919">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox  Background="#FF1B1B1B" BorderBrush="#FF27476B" Name="ProductList" Foreground="White"/>
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Height="364" Width="280">
+            <Label Content="Название" Foreground="White" HorizontalAlignment="Center"/>
+            <TextBox Width="250" Background="{x:Null}" BorderBrush="#FF203041" Foreground="White" x:Name="NameText"/>
+            <Label Content="Цена" Foreground="White" HorizontalAlignment="Center"/>
+            <TextBox Width="250" BorderBrush="#FF203041" Background="{x:Null}" Foreground="White" x:Name="PriceText"/>
+            <Label Content="Количество" Foreground="White" HorizontalAlignment="Center"/>
+            <TextBox Width="250" BorderBrush="#FF203041" Background="{x:Null}" Foreground="White"  x:Name="QuantityText"/>
+            <Button x:Name="Addproduct" Content="Добавить товар" Width="250" Height="30" Background="{x:Null}" BorderBrush="#FF264669" Foreground="White" Margin="10" RenderTransformOrigin="1.592,1.435" Click="Addproduct_Click"/>
+            <Button x:Name="Showproduct" Content="Показать выбранный товар" Width="250" Height="30" Background="{x:Null}" BorderBrush="#FF264669" Foreground="White" Margin="10" RenderTransformOrigin="1.592,1.435" Click="Showproduct_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
